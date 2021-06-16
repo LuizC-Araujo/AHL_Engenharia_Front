@@ -1,0 +1,114 @@
+<nb-card>
+    <nb-card-header>
+        <h4>Cadastrar Colaborador</h4>
+    </nb-card-header>
+    <nb-card-body>
+        <form [formGroup]="funcionarioForm">
+            <div class="coluna">
+                <div class="form-group col-6">
+                    <label for="inputRegistro" class="label col-form-label">ID COLABORADOR</label>
+                    <div class="">
+                        <input formControlName="id" type="text" nbInput fullWidth id="inputRegistro">
+                    </div>
+                    <label for="inputNome" class="label col-form-label">NOME</label>
+                    <div class="">
+                        <input formControlName="nome" type="text" nbInput fullWidth id="inputNome">
+                    </div>
+                    <label for="inputCpf" class="label col-form-label">CPF</label>
+                    <div class="">
+                        <input formControlName="cpf" type="text" nbInput fullWidth id="inputCpf">
+                    </div>
+                    <label for="inputSenha" class="label col-form-label">SENHA</label>
+                    <div class="">
+                        <input formControlName="senha" type="password" nbInput fullWidth id="inputSenha">
+                    </div>
+                    <label for="inputTelefone" class="label col-form-label">TELEFONE</label>
+                    <div class="">
+                        <input formControlName="telefone" type="text" nbInput fullWidth id="inputTelefone">
+                    </div>
+                    <label for="inputSabado" class="label col-form-label">SÁBADO</label>
+                    <div class="check-falta-div">
+                        <input formControlName="sabado" type="checkbox" fullWidth id="inputSabado" name="falta"><span id="check-falta">Sim</span>
+                    </div>
+                    <label for="inputInicioExpSab" class="label col-form-label">INÍCIO EXPEDIENTE SÁBADO</label>
+                    <div class="">
+                        <input formControlName="inicioExpedienteSabado" type="time" nbInput fullWidth id="inputInicioExpSab">
+                    </div>
+                    <label for="inputFinalExpSab" class="label col-form-label">FINAL EXPEDIENTE SÁBADO</label>
+                    <div class="">
+                        <input formControlName="finalExpedienteSabado" type="time" nbInput fullWidth id="inputFinalExpSab">
+                    </div>
+                    <br><br><br><br>
+                    <label for="inputIdCargo" class="label col-form-label">ID CARGO</label>
+                    <div class="">
+                        <input formControlName="idCargo" type="text" nbInput fullWidth id="inputIdCargo">
+                    </div>
+                    <label for="inputCidade" class="label col-form-label">CIDADE</label>
+                    <div class="">
+                        <input formControlName="cidade" type="text" nbInput fullWidth id="inputCidade">
+                    </div>
+                    <label for="inputCep" class="label col-form-label">CEP</label>
+                    <div class="">
+                        <input formControlName="cep" type="text" nbInput fullWidth id="inputCep">
+                    </div>
+                    <label for="inputNumero" class="label col-form-label">NÚMERO</label>
+                    <div class="">
+                        <input formControlName="numero" type="text" nbInput fullWidth id="inputNumero">
+                    </div>
+                </div>
+                <div class="form-group col-6">
+                    <label for="inputDataNasc" class="label col-form-label">NASCIMENTO</label>
+                    <div class="">
+                        <input formControlName="nascimento" type="date" nbInput fullWidth id="inputDataNasc">
+                    </div>
+                    <label for="inputSobrenome" class="label col-form-label">SOBRENOME</label>
+                    <div class="">
+                        <input formControlName="sobrenome" type="text" nbInput fullWidth id="inputSobrenome">
+                    </div>
+                    <label for="inputDependentes" class="label col-form-label">DEPENDENTES</label>
+                    <div class="">
+                        <input formControlName="dependentes" type="number" nbInput fullWidth id="inputDependentes">
+                    </div>
+                    <label for="inputIdSetor" class="label col-form-label">EMAIL</label>
+                    <div class="">
+                        <input formControlName="email" type="text" nbInput fullWidth id="inputEmail">
+                    </div>
+                    <label for="inputCartTrabalho" class="label col-form-label">CART. TRABALHO</label>
+                    <div class="">
+                        <input formControlName="cartTrabalho" type="text" nbInput fullWidth id="inputCartTrabalho">
+                    </div>
+                    <label for="inputDomingo" class="label col-form-label">DOMINGO</label>
+                    <div class="check-falta-div">
+                        <input formControlName="domingo" type="checkbox" fullWidth id="inputDomingo" name="falta"><span id="check-falta">Sim</span>
+                    </div>
+                    <label for="inputInicioExpDom" class="label col-form-label">INÍCIO EXPEDIENTE DOMINGO</label>
+                    <div class="">
+                        <input formControlName="inicioExpedienteDomingo" type="time" nbInput fullWidth id="inputInicioExpDom">
+                    </div>
+                    <label for="inputFinalExpDom" class="label col-form-label">FINAL EXPEDIENTE DOMINGO</label>
+                    <div class="">
+                        <input formControlName="finalExpedienteDomingo" type="time" nbInput fullWidth id="inputFinalExpDom">
+                    </div>
+                    <br><br><br><br>
+                    <label for="inputIdSetor" class="label col-form-label">ID SETOR</label>
+                    <div class="">
+                        <input formControlName="idSetor" type="text" nbInput fullWidth id="inputIdSetor">
+                    </div>
+                    <label for="inputBairro" class="label col-form-label">BAIRRO</label>
+                    <div class="">
+                        <input formControlName="bairro" type="text" nbInput fullWidth id="inputBairro">
+                    </div>
+                    <label for="inputLogradouro" class="label col-form-label">LOGRADOURO</label>
+                    <div class="">
+                        <input formControlName="logradouro" type="text" nbInput fullWidth id="inputLogradouro">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="center">
+                  <button type="submit" nbButton status="danger" (click)="addFuncionario()">CADASTRAR</button>
+                </div>
+            </div>
+        </form>
+    </nb-card-body>
+</nb-card>

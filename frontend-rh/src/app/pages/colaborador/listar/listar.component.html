@@ -1,0 +1,26 @@
+<form class="form-inline">
+  <div class="form-group mx-sm-3 mb-2">
+    <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="nome" placeholder="Buscar por nome">
+  </div>
+  <button type="button" (click)="buscarColaboradorNome()" class="btn btn-primary mb-2">Buscar</button>
+</form>
+<br>
+<table class="table table-bordered table-dark">
+<thead class="thread-dark">
+  <th scope="col">ID</th>
+  <th scope="col">Nome</th>
+  <th scope="col">CPF</th>
+  <th scope="col">Data de Nascimento</th>
+  <th scope="col">Editar</th>
+</thead>
+
+<tbody>
+  <tr *ngFor="let colaborador of colaboradores">
+    <td>{{colaborador.id}}</td>
+    <td>{{colaborador.nome}}</td>
+    <td>{{colaborador.cpf}}</td>
+    <td>{{colaborador.dataNascimento}}</td>
+    <td><button class="btn btn-warning">Editar</button></td>
+  </tr>
+</tbody>
+</table>

@@ -1,0 +1,18 @@
+<div class="center">
+  <img class="logo" src="../../../../assets/images/AHL.png" alt="">
+  <h1>Login</h1>
+  <form [formGroup]="loginForm">
+    <div class="txt_field">
+      <input formControlName="cpf" type="text" required>
+      <span></span>
+      <label>CPF</label>
+    </div>
+    <div class="txt_field">
+      <input formControlName="senha" type="password" required>
+      <span></span>
+      <label>Senha</label>
+    </div>
+    <div class="pass">Esqueceu a senha?</div>
+    <input type="submit" value="Login" (click)="logar()">
+  </form>
+</div>

@@ -1,0 +1,56 @@
+<nb-card>
+    <nb-card-header>
+        <h4>Registro de Pontos</h4>
+    </nb-card-header>
+    <nb-card-body>
+        <form [formGroup]="pontosForm">
+            <div class="coluna">
+                <div class="form-group col-6">
+                    <label for="inputIdColab" class="label col-form-label">ID COLABORADOR</label>
+                    <div class="">
+                        <input formControlName="colaboradorID" type="text" nbInput fullWidth id="inputIdColab">
+                    </div>
+                    <label for="inputInicioExp" class="label col-form-label">INÍCIO EXPEDIENTE</label>
+                    <div class="">
+                        <input formControlName="inicioExpediente" type="time" nbInput fullWidth id="inputInicioExp">
+                    </div>
+                    <label for="inputFinalExp" class="label col-form-label">FINAL EXPEDIENTE</label>
+                    <div class="">
+                        <input formControlName="fimExpediente" type="time" nbInput fullWidth id="inputFinalExp">
+                    </div>
+                    <label for="inputBancoHoras" class="label col-form-label">BANCO DO DIA</label>
+                    <div class="">
+                        <input formControlName="bancoDia" type="text" nbInput fullWidth id="inputBancoHoras" readonly>
+                    </div>
+                    <label for="inputObs" class="label col-form-label">OBSERVAÇÕES</label>
+                    <div class="">
+                        <input formControlName="observacao" type="text" nbInput fullWidth id="inputObs">
+                    </div>
+                </div>
+                <div class="form-group col-6">
+                    <label for="inputDataTrabalho" class="label col-form-label">DATA</label>
+                    <div class="">
+                        <input formControlName="dataTrabalho" type="date" nbInput fullWidth id="inputDataTrabalho">
+                    </div>
+                    <label for="inputInicioInt" class="label col-form-label">INÍCIO INTERVALO</label>
+                    <div class="">
+                        <input formControlName="inicioIntervalo" type="time" nbInput fullWidth id="inputInicioInt">
+                    </div>
+                    <label for="inputFinalInt" class="label col-form-label">FINAL INTERVALO</label>
+                    <div class="">
+                        <input formControlName="fimIntervalo" type="time" nbInput fullWidth id="inputFinalInt">
+                    </div>
+                    <label for="inputFalta" class="label col-form-label">FALTA</label>
+                    <div class="check-falta-div">
+                        <input formControlName="falta" type="checkbox" fullWidth id="inputFalta" name="falta"><span id="check-falta">Sim</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="center">
+                  <button type="submit" nbButton status="danger" (click)="addPontos()">REGISTRAR PONTO</button>
+                </div>
+            </div>
+        </form>
+    </nb-card-body>
+</nb-card>
